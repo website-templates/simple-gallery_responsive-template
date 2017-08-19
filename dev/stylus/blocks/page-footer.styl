@@ -1,0 +1,76 @@
+////////////////////////////////////////
+// $Page footer
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-page-footer_bg = #ccc
+$c-page-footer-title_c = #fff
+$c-page-footer-title_sh = #333
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".page-footer"
+
+{$block}
+    position fixed
+    bottom 0
+    right 0
+    left 0
+    z-index 0
+    height 50vh
+    background-color $c-page-footer_bg
+    background-image: url('../images/blocks/page-footer/page-footer_bg.jpg')
+    background-repeat no-repeat
+    background-size cover
+    background-position center center
+
+
+    // $Page footer inner container
+    &__inner
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        width 100%
+        max-width 1200px
+        height 100%
+        margin 0 auto
+
+
+    // $Page footer group
+    &__group
+        padding 0 20px
+
+
+    // $Page footer text
+    &__text
+        display block
+        margin 0 auto 15px
+        font-family $f-sans
+        font-size 26px
+        font-weight bold
+        line-height 1
+        color $c-page-footer-title_c
+        text-align center
+        text-shadow 0px 1px 1px $c-page-footer-title_sh
+
+        @media screen and (max-width: 640px), screen and (max-height: 480px)
+            font-size 24px
+
+
+    // $Page footer text link
+    &__text-link
+        display inline-block
+        margin 0 auto
+        font-family $f-sans
+        font-size inherit
+        line-height inherit
+        color inherit
+        text-decoration none
+
+

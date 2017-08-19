@@ -1,0 +1,31 @@
+extends ../layouts/base
+
+block variables
+    - pageLang = ""
+    - pageTitle = ""
+    - pageDescription = ""
+    - pageKeywords = ""
+    - pageUrl = ""
+
+
+block body-content
+
+    +page-header({
+        pageHeaderTitle: "My Awesome Street Art Gallery"
+    })
+
+
+    +page-content
+        block page-content-gallery
+
+            +gallery({
+                galleryItems: gallery
+            })
+
+
+    +page-footer({
+        pageFooterSiteTitle: config.site.title,
+        pageFooterSiteUrl: config.site.url,
+        pageFooterSiteAuthor: config.site.authorName,
+        pageFooterSiteAuthorLink: config.site.authorLink
+    })

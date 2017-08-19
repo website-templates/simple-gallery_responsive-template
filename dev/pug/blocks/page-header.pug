@@ -1,0 +1,8 @@
+//- Page header
+mixin page-header(args)
+    - opts = args || {}
+
+    hader.page-header
+        .page-header__inner
+            .page-header__group
+                h1.page-header__title=opts.pageHeaderTitle

@@ -1,0 +1,66 @@
+////////////////////////////////////////
+// $Page header
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-page-header_bg = #ccc
+$c-page-header-title_c = #fff
+$c-page-header-title_sh = #333
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".page-header"
+
+{$block}
+    position fixed
+    top 0
+    right 0
+    left 0
+    z-index 0
+    height 50vh
+    background-color $c-page-header_bg
+    background-image: url('../images/blocks/page-header/page-header_bg.jpg')
+    background-repeat no-repeat
+    background-size cover
+    background-position center center
+
+
+    // $Page header inner container
+    &__inner
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        width 100%
+        max-width 1200px
+        height 100%
+        margin 0 auto
+
+
+    // $Page header group
+    &__group
+        padding 0 20px
+
+
+    // $Page header title
+    &__title
+        display block
+        margin 0 auto
+        font-family $f-sans
+        font-size 60px
+        font-weight bold
+        line-height 1
+        color $c-page-header-title_c
+        text-align center
+        text-shadow 0px 1px 2px $c-page-header-title_sh
+
+        @media screen and (max-width: 960px), screen and (max-height: 640px)
+            font-size 50px
+
+        @media screen and (max-width: 640px), screen and (max-height: 480px)
+            font-size 40px

@@ -1,0 +1,12 @@
+//- Page Footer
+mixin page-footer(args)
+    - opts = args || {}
+
+    footer.page-footer
+        .page-footer__inner
+            .page-footer__group
+                p.page-footer__text
+                    a.page-footer__text-link(href=opts.pageFooterSiteUrl) #{opts.pageFooterSiteTitle}
+                p.page-footer__text
+                    | Designed by&nbsp;
+                    a.page-footer__text-link(href=opts.pageFooterSiteAuthorLink)=opts.pageFooterSiteAuthor

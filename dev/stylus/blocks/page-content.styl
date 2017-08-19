@@ -1,0 +1,33 @@
+////////////////////////////////////////
+// $Page content
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-page-content_bg = #fff
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".page-content"
+
+{$block}
+    position relative
+    z-index 1
+    width 100%
+    margin-top 50vh
+    margin-bottom 50vh
+    background-color $c-page-content_bg
+
+
+    // $Page content main area
+    &__main
+        width 100%
+
+
+    // $Page content gallery area
+    &__gallery
+        width 100%

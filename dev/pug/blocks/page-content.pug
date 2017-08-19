@@ -1,0 +1,9 @@
+//- Page content
+mixin page-content(args)
+    - opts = args || {}
+
+
+    .page-content
+        main.page-content__main
+            section.page-content__gallery
+                block page-content-gallery

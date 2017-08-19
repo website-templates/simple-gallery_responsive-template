@@ -1,0 +1,25 @@
+{
+    "site": {
+        "lang": "en",
+        "title": "Simple Gallery",
+        "titleDelim": " | ",
+        "description": "Responsive gallery one-page template template",
+        "keywords": "gallery, gallery template, html5 template, css3 template",
+        "url": "https://website-templates.github.io/simple-gallery_responsive-template/",
+        "authorName": "Maxim Orlov",
+        "authorLink": "https://github.com/orlovmax"
+    },
+    "modules": {
+        "googleFonts": "https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic%7CPT+Serif&subset=latin,cyrillic",
+        "bodyJs": false,
+        "headJs": false,
+        "customCss": false,
+        "noscriptCss": false,
+        "twitterCard": false,
+        "openGraph": false
+    },
+    "links": {
+        "twitterCardCreator": "===twittercard-creator-account===",
+        "twitterCardAccount": "===twittercard-creator-account==="
+    }
+}

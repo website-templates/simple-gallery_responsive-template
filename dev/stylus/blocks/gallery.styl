@@ -1,0 +1,222 @@
+////////////////////////////////////////
+// $Gallery
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+// Colors
+$c-page-gallery-preview-title_c = #fff
+$c-page-gallery-preview-link_c = #fff
+
+$c-page-gallery-isle-inner_bg = #fff
+$c-page-gallery-isle-inner_sh = rgba(0, 0, 0, .4)
+
+$c-page-gallery-preview-caption_bg = rgba(44, 62, 80,.9)
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".gallery"
+
+{$block}
+
+    // $Gallery flow layout
+    &__flow
+        display flex
+        flex-direction row
+        justify-content flex-start
+        align-items flex-start
+        flex-wrap wrap
+        width 100%
+        padding 1.5vw
+
+        @media screen and (max-width: 960px)
+            padding 20px
+
+        @media screen and (max-width: 640px)
+            padding 15px
+
+        @media screen and (max-width: 480px)
+            padding 10px
+
+
+    // $Gallery flow layout isle item
+    &__isle
+        flex-grow 0
+        flex-shrink 1
+        width 25%
+        padding 1.5vw
+
+        @media screen and (max-width: 2560px)
+            width 33.3%
+
+        @media screen and (max-width: 1760px)
+            width 50%
+
+        @media screen and (max-width: 960px)
+            width 100%
+            padding 20px
+
+        @media screen and (max-width: 640px)
+            padding 15px
+
+        @media screen and (max-width: 480px)
+            padding 15px 10px
+
+
+    // $Gallery flow layout isle item inner container
+    &__isle-inner
+        position relative
+        z-index 5
+        width 100%
+        height 0
+        padding-bottom 62.5%
+        background-color $c-page-gallery-isle-inner_bg
+        box-shadow 0 0.1vw 1vw -0.1vw $c-page-gallery-isle-inner_sh
+        border-radius 0.5vw
+        overflow hidden
+
+        @media screen and (max-width: 960px)
+            box-shadow 0 2px 20px -2px $c-page-gallery-isle-inner_sh
+            border-radius 5px
+
+
+    // $Gallery flow layout isle item content area
+    &__isle-content
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        overflow hidden
+
+
+    // $Gallery preview
+    &__preview
+        position relative
+        width 100%
+        height 100%
+
+
+    // $Gallery preview image
+    &__preview-image
+        width 100%
+        height 100%
+        overflow hidden
+
+        // $Gallery preview image picture
+        & img
+            display block
+            width 100%
+            min-height 100%
+
+
+    // $Gallery preview caption
+    &__preview-caption
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        left 0
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        background-color $c-page-gallery-preview-caption_bg
+        opacity 0
+        transition: opacity .5s
+
+        // $Gallery preview caption CONTEXT: // $Gallery preview hovered state
+        {$block}__preview:hover &
+            opacity 1
+
+
+    // $Gallery preview information
+    &__preview-info
+        flex-grow 0
+        flex-shrink 1
+        max-width 100%
+        padding 20px
+        text-align center
+
+        @media screen and (max-width: 480px)
+            padding 10px
+
+
+    // $Gallery preview title
+    &__preview-title
+        display block
+        margin 0 auto 20px
+        font-family $f-sans
+        font-size 26px
+        font-weight bold
+        line-height 1
+        color $c-page-gallery-preview-title_c
+        text-align center
+
+        @media screen and (max-width: 960px)
+            font-size 24px
+
+        @media screen and (max-width: 320px)
+            font-size 22px
+
+
+    // $Gallery preview links
+    &__preview-links
+        display inline-block
+        text-align left
+
+
+    // $Gallery preview link
+    &__preview-link
+        display block
+        margin 0 auto 10px
+        font-family $f-sans
+        font-size 18px
+        line-height 1
+        text-align left
+        text-decoration none
+        color $c-page-gallery-preview-link_c
+
+        @media screen and (max-width: 480px)
+            margin-bottom 5px
+
+        &:hover
+            text-decoration underline
+
+        &:not(:last-of-type)
+            margin-right 20px
+
+        // $Gallery preview link MOD: role original
+        // $Gallery preview link MOD: role author
+        // $Gallery preview link MOD: role photographer
+        &_role_original,
+        &_role_author,
+        &_role_photographer
+            &:before
+                display inline-block
+                margin-right 10px
+                font-family "site-icons"
+                font-size 18px
+                line-height 1
+                vertical-align baseline
+
+                {$block}__preview-link:hover &
+                    text-decoration none
+
+        // $Gallery preview link MOD: role original
+        &_role_original
+            &:before
+                content "\e804"
+
+        // $Gallery preview link MOD: role author
+        &_role_author
+            &:before
+                content "\e805"
+
+        // $Gallery preview link MOD: role photographer
+        &_role_photographer
+            &:before
+                content "\e806"

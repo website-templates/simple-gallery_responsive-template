@@ -1,0 +1,20 @@
+//- Gallery
+mixin gallery(args)
+    - opts = args || {}
+
+    .gallery
+        .gallery__inner
+            .gallery__flow
+                each item in opts.galleryItems
+                    .gallery__isle
+                        .gallery__isle-inner
+                            .gallery__isle-content
+                                figure.gallery__preview
+                                    .gallery__preview-image: img(src=item.imageLink, alt=item.imageDescr)
+                                    figcaption.gallery__preview-caption
+                                        .gallery__preview-info
+                                            h2.gallery__preview-title=item.title
+                                            .gallery__preview-links
+                                                a.gallery__preview-link.gallery__preview-link_role_original(href=item.originalLink) View original
+                                                a.gallery__preview-link.gallery__preview-link_role_author(href=item.authorLink) #{item.authorName}
+                                                a.gallery__preview-link.gallery__preview-link_role_photographer(href=item.photographerLink) #{item.photographerName}

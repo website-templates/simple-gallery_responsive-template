@@ -4,6 +4,8 @@ Responsive gallery one-page template template, designed and coded by [Maxim Orlo
 
 Demo: [http://website-templates.github.io/simple-gallery_responsive-template](http://website-templates.github.io/simple-gallery_responsive-template/)
 
+![Mockup demo](screenshots/pic.jpg)
+Product mockup created with [http://magicmockups.com/](http://magicmockups.com/)
 
 ## Contents
 * [Folder structure](#folder-and-file-structure)
