@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ChaudharySecurityCareers</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  
+  <style>
+  .navbar-fixed
+  {
+	z-index:999;
+  }
+  </style>
+</head>
+<body>
+
+
+<div class="navbar-fixed">
+  <nav id="nav1">
+    <div class="nav-wrapper">
+      <div class="row">
+        <div class="col s12">
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <a href="https://codepen.io/collection/nbBqgY/" id="logo" class="brand-logo" target="_blank"><p id="naam">CHAUDHARY</p> <p id="tcolor">SECURITY SERVICES</p></a>
+          <ul class="right hide-on-med-and-down" id="mennu">
+            <li><a href="home.html" target="_blank"id="links">HOME</a></li>
+            <li><a href="Aboutus.html" id="links">ABOUT US</a></li>
+            <li><a href="services.html"  id="links">SERVICES</a></li>
+			<li><a href="Career.html"  id="links">CAREER</a></li>
+			<li><a href="gallery.html"  id="links">GALLERY</a></li>
+			<li><a href="Contactus.html"  id="links">CONTACT US</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="side-nav" id="mobile-demo">
+       <li><a href="home.html" target="_blank"id="links">HOME</a></li>
+            <li><a href="Aboutus.html" id="links" target="_blank">ABOUT US</a></li>
+            <li><a href="services.html" target="_blank"  id="links">SERVICES</a></li>
+			<li><a href="Career.html" target="_blank"  id="links">CAREER</a></li>
+			<li><a href="gallery.html"  id="links">GALLERY</a></li>
+			<li><a href="Contactus.html" target="_blank" id="links">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
+  
+
+  
+  
+  
+  <div class="row" id="controw">
+      <div class="container" id="contact">
+	  
+        <div class="head center"><h5 id="about">Career</h5></div>
+		<hr id="line"></hr>
+		<div class="content center">
+			<ul>
+			<li>WHATSAPP/MAIL on following number/website for Job Enquiry.</li>
+			<li>Phone: +91 9824062240, 9428399478</li>
+			<li>Email: css2017brd@gmail.com</li>
+			</ul>
+			
+		</div>
+      </div>
+    
+  </div>
+  
+  
+  
+  
+  
+   <footer class="page-footer" id="foot">
+          <div class="container">
+            <div class="row">
+              <div class="col s12 m4">
+				<h5 id="text2">SERVICES</h5>
+				<ul id="service">
+					<li>EVENT ELECTRONIC SECURITY</li>
+					<li>CELEBRITY PROTECTION</li>
+					<li>FILM SET SECURITY</li>
+					<li>INDUSTRIAL SECURITY SERVICES/BODY GUARDS/PERSONAL SECURITY</li>
+					<li>GUN MAN/PERMANENT SECURITY DEPLOYMENT SERVICES(MALLS,HOSPITAL,MULTIPLEX)</li>
+					<li>LABOUR SERVICES</li>
+					<li>PHYSICAL SECURITY SERVICES</li>
+				</ul>
+				
+			  </div>
+			  <div class="col s12 m4">
+			  <h5 id="text2">BUSINESS HOURS</h5>
+			  <p>Monday-Saturday : 9am to 7pm</p>
+			  <p>Sunday Closed</p>
+			  
+			  </div>
+			  <div class="col s12 m4">
+			  
+			  </div>
+			  
+              
+            </div>
+          </div>
+          <div class="footer-copyright" id="copyr">
+            <div class="container">
+            © 2018 Chaudhary Security    
+			<p id="copy">Developed by <a href="http://appalanche.in/" id="copy2">Appalanche</a></p>
+			
+            
+            </div>
+          </div>
+        </footer>
+  
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script style="text/javascript">
+  $(document).ready(function(){
+   
+  //SIDENAV
+  $(".button-collapse").sideNav();
+  $('.parallax').parallax();
+  $('.slider').slider();
+});
+
+$('ul.nav').find('a').click(function(){
+    var $href = $(this).attr('href');
+    var $anchor = $('#'+$href).offset();
+    window.scrollTo($anchor.left,$anchor.top);
+    return false;
+});
+
+
+  </script>
+
+  </body>
+</html>

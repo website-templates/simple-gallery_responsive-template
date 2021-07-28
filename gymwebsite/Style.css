@@ -1,0 +1,43 @@
+body {
+    color: blueviolet;
+    background-color: burlywood;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: cornflowerblue;
+}
+
+a {
+    color: cyan;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: darkolivegreen;
+    outline: darkseagreen;
+    text-decoration: deeppink;
+}
+
+.button {
+    background-color: firebrick;
+    border: fuchsia;
+    padding: 15px 32px;
+    text-shadow: gold;
+    text-align: center;
+    text-decoration: indigo;
+    display: inline-flex;
+    font-size: large;
+
+
+}
+
+
+<script src="gymwebsite.js" ></script>
