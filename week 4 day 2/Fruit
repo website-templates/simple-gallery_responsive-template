@@ -1,0 +1,44 @@
+ clas Fruit {
+    fruitname="fruit";
+    hownutritious = "unknown";
+     constructor(name){
+         this.fruitname = name;
+         this.calculateNutrition();
+     }
+
+     speak = function () {
+         console.log("Hey my name is " + this.name);
+     };
+
+     calculateNutrition = function () {
+         if (this.fruitname === "Apple") {
+             this.hownutritious = "very";
+         } else if (this.fruitname === "Banana") {
+             this.hownutritious = "pretty";
+         } else {
+             this.hownutritious = "not very";
+         }
+
+     };
+              sayNutrition() {
+         console.log("This " + this.fruitname + " is " + hownutritious + "");
+     }
+ }
+
+ let apple = new Fruit("Apple");
+ let banan = new Fruit("Banana");
+
+ console.log("Our first fruit is named: " + apple.name);
+
+ console.log("Our second fruit is named: " + banan.name);
+
+ apple.speak();
+ banan.speak();
+
+ class Animal {
+     legs = 0;
+     brain = "regular"
+     speak = function() {
+         console.log("I'm an animal");
+     };
+ }
